@@ -17,12 +17,25 @@ void reverse(char* ptr);
 
 int main()
 {
+	char cstring[100] = " ";
+	char c = '\0';
 
+	cout << "Please enter a string: ";
+	cin.getline(cstring, 100);
+
+	cout << "Please enter a character: ";
+	cin.get(c);
+
+	cout << "The character " << c << " appears " << charcnt(cstring, c) << " times in the string." << endl;
+	cout << "There are " << repeat(cstring) << " repeated characters in the string." << endl;
+	cout << "The reverse of this string is: ";
+	reverse(cstring);
+	cout << "\n" << endl;
 }
 int charcnt(char* ptr, char c)
 {
 	int count = 0;
-	for (int i = 0; ptr[i] != '/0'; i++)
+	for (int i = 0; ptr[i] != '\0'; i++)
 	{
 		if (ptr[i] == c)
 		{
